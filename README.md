@@ -34,3 +34,12 @@ O autor realizou a revisão pessoal dos nove desafios, conforme declarado nesta 
 | Geração e revisão dos testes | Cobrir limite civil de São Paulo, prazo inválido, motivo obrigatório, transições indevidas e aprovação final irreversível. |
 | Qualidade estrutural | Conferir que novas versões não alteram versões anteriores e que a validação ocorre antes da mutação. |
 
+
+
+## Verificação completa em 09/10/2026
+
+Acrescentado teste de envio de versão no primeiro milissegundo após o prazo, com preservação do histórico.
+
+O transporte HTTP rejeita JSON nulo, arrays e valores primitivos com 400 antes de chamar o serviço. Parâmetros de rota são decodificados uma vez; escape inválido retorna 400. Dois testes de transporte verificam esses comportamentos, incluindo códigos com caracteres especiais.
+
+Resultado desta rodada: 6 testes aprovados, zero falhas; checagem sintática aprovada e smoke HTTP com entrada válida 200 e inválida 400. As correções e a nova validação foram realizadas pelo Codex; não são atribuídas como revisão manual do autor.
